@@ -38,11 +38,8 @@ jobs:
           terraform --version
 
       # Runs a single command using the runners shell
-      - name: Terraform Init
-        run: find . -type f -name "*.tf" -exec dirname {} \;|sort -u | while read m; do (cd "$m" && terraform init -input=false -backend=false) || exit 1; done
+      #- name: Terraform Init
+      #  run: find . -type f -name "*.tf" -exec dirname {} \;|sort -u | while read m; do (cd "$m" && terraform init -input=false -backend=false) || exit 1; done
 
-      - name: Validate Terraform configs
-        run: find . -name ".terraform" -prune -o -type f -name "*.tf" -exec dirname {} \;|sort -u | while read m; do (cd "$m" && terraform validate && echo "√ $m") || exit 1 ; done
-
-      - name: Check Terraform config formatting 
-        run: terraform fmt -write=false -recursive
+      - name: Terragrunt plan-all
+        run: terragrunt plan-all
