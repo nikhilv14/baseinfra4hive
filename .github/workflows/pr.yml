@@ -30,8 +30,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: install terraform and terragrunt
         run: |
-          brew tap hashicorp/tap
-          brew install hashicorp/tap/terraform
           brew install terragrunt
 
       - name: Get Versions
