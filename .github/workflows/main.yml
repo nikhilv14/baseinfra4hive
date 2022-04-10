@@ -14,10 +14,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install Terraform and Terragrunt
       run: |
-        brew tap rocketinsights/tgenv
-        brew install tfenv tgenv
-        tfenv install
-        tgenv install
+        brew tap hashicorp/tap
+        brew install hashicorp/tap/terraform
+        brew install terragrunt 
     - name: Get Versions
       run: |
         terragrunt --version
