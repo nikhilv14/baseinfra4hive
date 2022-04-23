@@ -1,7 +1,7 @@
 inputs = {
   environment                       = "prod" #split("/", get_terragrunt_dir())[length(split("/", get_terragrunt_dir()))-2]
   profile                          = "tfp"
-  region                            = "eu-west-1"
+  region                            = "us-west-2"
   csoc_aws_account_id            = "920416911834"
 }
 
@@ -10,7 +10,7 @@ generate "provider" {
   if_exists = "overwrite_terragrunt"
   contents  = <<EOF
 provider "aws" {
-    region = "eu-west-1"
+    region = "us-west-2"
 }
 EOF
 }

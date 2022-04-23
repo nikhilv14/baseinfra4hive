@@ -26,23 +26,23 @@ inputs = {
   name = "thehive"
   ec2s = {
     thehive = {
-      ami = "ami-0000bebe516f304b1",
+      ami = "ami-0a248ce88bcc7bd23",
       instancetype = "t2.micro",
       keyname = "nhive"
     },
     cortex = {
-      ami = "ami-0000bebe516f304b1",
+      ami = "ami-0a248ce88bcc7bd23",
       instancetype = "t2.micro",
       keyname = "nhive"
     },
     misp = {
-      ami = "ami-0000bebe516f304b1",
+      ami = "ami-0a248ce88bcc7bd23",
       instancetype = "t2.micro",
       keyname = "nhive"
     }
   }
-  vpcid  = "vpc-0eefc49013f06e45a"
-  subnetid = "subnet-08e1d5552de91b5bd"
+  vpcid  = "vpc-0cf867bcc00f78d26"
+  subnetid = "subnet-0aab4a9db1dac2d80"
   
 }
 
